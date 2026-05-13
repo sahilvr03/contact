@@ -10,8 +10,12 @@ const app = express();
 app.use(express.json());
 app.use(
   cors({
-    origin: process.env.FRONTEND_URL || "https://crop2x.vercel.app",
-    methods: ["POST"],
+    origin: [
+      "https://crop2x.vercel.app",
+      "http://localhost:3000",
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
   })
 );
 
