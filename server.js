@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(
   cors({
     origin: [
-      "https://crop2x.vercel.app",
+      "https://crop2x.com",
       "http://localhost:3000",
     ],
     methods: ["GET", "POST", "PUT", "DELETE"],
